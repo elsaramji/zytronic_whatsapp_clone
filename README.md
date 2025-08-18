@@ -6,9 +6,14 @@
 
 ## 🎥 Demo Video
 
-<video width="600" controls><source src="assets/demo.mp4" type="video/mp4">
-Demo video not available.
-</video>
+ [Video](https://drive.google.com/file/d/1HSSISU_ubX2vQbAF_Qs4ajIeuNTa3lqg/view?usp=sharing).
+
+---
+
+## Demo App
+
+[App](https://appetize.io/app/b_ff7hee3i5j5gi3ctppzyew4h7m).
+
 ---
 
 ## ScreenShots
@@ -63,11 +68,11 @@ Demo video not available.
 
 ## 5. How to Run
 
-1. Clone the repository:  
-
    ```bash
-   git clone <Repository URL>
+   git clone "https://github.com/elsaramji/zytronic_whatsapp_clone.git"
    cd zytronic_whatsapp_clone
    flutter pub get
    flutter run
    ```
+
+---
