@@ -1,15 +1,21 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:whatsapp_clone_flutter/core/mocks/mock_data.dart';
+import 'package:whatsapp_clone_flutter/features/chats/data/models/chat_model.dart';
 import 'package:whatsapp_clone_flutter/features/chats/presentation/widgets/chat_bubble.dart';
 
-class Conversation extends StatelessWidget {
+class Conversation extends StatefulWidget {
+  final Chat chat;
   const Conversation({
     super.key,
+    required this.chat,
   });
 
+  @override
+  State<Conversation> createState() => _ConversationState();
+}
+
+class _ConversationState extends State<Conversation> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,8 +27,8 @@ class Conversation extends StatelessWidget {
           fit: BoxFit.cover,
           colorFilter: ColorFilter.mode(
             Theme.of(context).brightness == Brightness.dark
-                ? Colors.black.withAlpha(180)
-                : Colors.white.withAlpha(76),
+                ? Color(0xFF1F2C34).withAlpha(200)
+                : Colors.grey.withAlpha(75),
             BlendMode.darken,
           ),
         ),
@@ -30,14 +36,13 @@ class Conversation extends StatelessWidget {
       child: ListView.builder(
         reverse: true,
         padding: EdgeInsets.symmetric(vertical: 10.h),
-        itemCount: MockData.messages.length,
+        itemCount: widget.chat.messages.length,
         itemBuilder: (context, index) {
           // Display messages in reverse order
-          final message = MockData.messages.reversed.toList()[index];
+          final message = widget.chat.messages.reversed.toList()[index];
           return ChatBubble(message: message);
         },
       ),
     );
   }
 }
-

@@ -39,9 +39,10 @@ class _ChatScreenState extends State<ChatScreen> {
       body: Column(
         children: [
           Expanded(
-            child: Conversation(),
+            child: Conversation(chat: widget.chat,),
           ),
           BuildingMassage(
+            chat: widget.chat,
             context: context,
             controller: _controller,
             showSendButton: _showSendButton,
