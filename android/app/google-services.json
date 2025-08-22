@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "483100572072",
+    "project_id": "zytronicwhatsappclone",
+    "storage_bucket": "zytronicwhatsappclone.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483100572072:android:14ec588c3a818c9e26859d",
+        "android_client_info": {
+          "package_name": "com.example.zytronic_whatsapp_clone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcb7j4o-bTiaSWDBNkVqKqMENtRbcF0Vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
