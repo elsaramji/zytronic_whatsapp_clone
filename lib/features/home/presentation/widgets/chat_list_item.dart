@@ -50,7 +50,7 @@ class ChatListItem extends StatelessWidget {
                   ),
                   SizedBox(height: 4.h),
                   Text(
-                    chat.lastMessage,
+                    chat.messages.last.text,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(

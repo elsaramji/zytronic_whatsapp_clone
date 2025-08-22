@@ -33,6 +33,10 @@ class ChatsAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: TextFormField(
               decoration: InputDecoration(
             hintText: "Ask Meta AI or Search",
+            prefixIcon: Icon(
+              Icons.search,
+              size: 16.sp,
+            ),
           )),
         ),
       ),

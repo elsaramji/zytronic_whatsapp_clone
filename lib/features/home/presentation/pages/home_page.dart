@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
   // الشاشات اللي هتظهر حسب الـ index
   final List<Widget> _screens = const [
-    ChatsList.ChatsPage(),
+    ChatsPage(),
     StoriesPage(),
   ];
   final List _appBars = const [ChatsAppBar(), StausAppBar()];

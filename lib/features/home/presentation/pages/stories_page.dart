@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:whatsapp_clone_flutter/core/mocks/mock_data.dart';
+import 'package:whatsapp_clone_flutter/features/stories/data/mocks/mock_stories.dart';
 import 'package:whatsapp_clone_flutter/features/stories/data/models/story_model.dart';
 import 'package:whatsapp_clone_flutter/features/stories/story_list_itme.dart';
 
@@ -10,7 +10,7 @@ class StoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final stories = MockData.stories;
+    final stories = MockStories.stories;
     final myStatus = stories.first;
     final recentUpdates = stories.sublist(1);
 
