@@ -13,4 +13,22 @@ class Message {
     required this.isSentByMe,
     this.status = MessageStatus.sent,
   });
+
+  Map<String, dynamic> toJson() => {
+        'text': text,
+        'time': time,
+        'isSentByMe': isSentByMe,
+        'status': status.toString(),
+      };
+
+  factory Message.fromJson(Map<String, dynamic> json) => Message(
+        text: json['text'],
+        time: json['time'],
+        isSentByMe: json['isSentByMe'],
+        status: json['status'] == 'sent'
+            ? MessageStatus.sent
+            : json['status'] == 'delivered'
+                ? MessageStatus.delivered
+                : MessageStatus.read,
+      );
 }
