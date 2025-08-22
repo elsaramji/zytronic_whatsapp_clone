@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:whatsapp_clone_flutter/core/theme.dart';
-import 'package:whatsapp_clone_flutter/features/home/home_screen.dart';
+import 'package:whatsapp_clone_flutter/core/configs/themes/theme.dart';
+import 'package:whatsapp_clone_flutter/features/home/presentation/pages/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,13 +23,14 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'WhatsApp Clone',
           debugShowCheckedModeBanner: false,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
+
+          theme: AppTheme.lightTheme(),
+          darkTheme: AppTheme.darkTheme(),
           themeMode: ThemeMode.system, // Automatically adapt to system theme
           home: child,
         );
       },
-      child: const HomeScreen(),
+      child: const HomePage(),
     );
   }
 }
