@@ -7,20 +7,33 @@ environment:
   sdk: '>=3.2.3 <4.0.0'
 
 dependencies:
+  # Flutter packages
+  # animate transitions for hero animation
   animates_transitions: ^0.0.3
+  # animations for suporting animations
   animations: ^2.0.11
+  # cached network image for image caching
   cached_network_image: ^3.3.1
+   # firebase for adding firebase services.
+  firebase_core: ^3.15.2 
+  # cloud firestore for database
+  cloud_firestore: ^5.6.11
+  # cupertino icons for icons
   cupertino_icons: ^1.0.6
-  firebase_core: ^3.15.2
+  # SDk
   flutter:
     sdk: flutter
+
+  # Supporting Responsive UI
   flutter_screenutil: ^5.9.1
+  # Google fonts
   google_fonts: ^6.2.1
+  # rename app
   rename_app: ^1.6.5
-
 dev_dependencies:
+  # flutter Luncher icons
   flutter_launcher_icons: "^0.14.4"
-
+# flutter Luncher icons Settings.
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
@@ -32,5 +45,6 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
+  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/logo.png
